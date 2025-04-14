@@ -28,16 +28,38 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 95vw;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         #clock {
             font-family: "DS-Digital", "Segment7", monospace;
-            font-size: 300px;
+            font-size: min(25vw, 300px);
             background: #fff;
-            padding: 20px 40px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
             letter-spacing: 5px;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            #clock {
+                font-size: min(20vw, 200px);
+                padding: 15px 10px;
+                letter-spacing: 2px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #clock {
+                font-size: min(15vw, 150px);
+                padding: 10px 5px;
+                letter-spacing: 1px;
+            }
         }
 
         @font-face {
